@@ -1,0 +1,479 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+
+
+    /* Colors */
+
+    /* Primary Text */
+
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+
+    /* Gradient Background gradient: */
+
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    /* Text */
+
+    --txt-Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --txt-Dark-grayish-blue: hsl(240, 6%, 50%);
+
+    /* Dividers */
+
+    --divider-LightGrayishBlue: hsl(240, 5%, 91%);
+
+    /* Fonts */
+    --font-primary: 'Kumbh Sans', sans-serif;
+
+    /* others */
+    --transition: all 0.3s ease;
+
+}
+
+/*
+=============== 
+
+*****************************
+*****************************
+Global Styles
+*****************************
+*****************************
+
+===============
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--Soft-blue);
+    background-image: linear-gradient(180deg, var(--Soft-violet), var(--Soft-blue));
+
+    color: var(--txt-Dark-grayish-blue);
+
+    line-height: 1.5;
+
+
+    min-height: 100vh;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(#ffffff);
+
+
+    background-repeat: no-repeat;
+
+
+}
+
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* 
+________________________
+________________________
+________________________
+{start} FONTS
+________________________
+________________________
+________________________*/
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--txt-Very-dark-grayish-blue);
+
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1rem;
+    color: var(--txt-Very-dark-grayish-blue);
+
+    width: 90%;
+
+    font-weight: 400;
+    transition: 0.2s ease;
+}
+
+
+
+
+p {
+    font-size: 0.8rem;
+
+
+    color: var(--txt-Dark-grayish-blue);
+}
+
+
+
+/* {end} FONTS ___________________*/
+
+
+/* 
+________________________
+________________________
+________________________
+{start} ELEMENTS
+________________________
+________________________
+________________________*/
+
+
+img {
+
+    display: block;
+    object-fit: cover;
+    width: 100%;
+
+}
+
+svg {
+    /* width: 100%;
+    height:100%; */
+
+    height: 100%;
+    width: auto;
+    transition: var(--transition);
+}
+
+/* {end} ELEMENTS ___________________*/
+
+
+
+/*
+=============== 
+
+*****************************
+*****************************
+Custom Classes
+*****************************
+*****************************
+
+===============
+*/
+
+
+.card {
+    max-width: min(30rem, 100%);
+    margin: 5rem 2rem;
+    margin-top: 15rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+
+    padding: 2rem;
+    padding-bottom: 3.5rem;
+    border-radius: 2rem;
+
+    box-shadow: 0rem 3rem 4rem -1rem rgba(34, 19, 116, 0.785)
+}
+
+/* 
+________________________
+________________________
+________________________
+{start}  HERO
+________________________
+________________________
+________________________*/
+
+
+/*section*/
+.hero-img {
+    position: relative;
+    top: -13rem;
+    margin-bottom: -7rem;
+
+
+}
+
+
+
+/* box png that doesnt appear on mobile */
+.box {
+    display: none;
+
+
+}
+
+
+/* literal image */
+.vector-hero {
+    filter: drop-shadow(0rem 3rem 0rem hsl(240, 5%, 91%));
+}
+
+
+/* {end} HERO ___________________*/
+
+
+/* 
+________________________
+________________________
+________________________
+{start}  questions
+________________________
+________________________
+________________________*/
+
+
+
+.cardcontent {
+
+    width: 100%;
+}
+
+/* wraps the entire question */
+.question {
+    border-bottom: 1.6px solid var(--divider-LightGrayishBlue);
+
+}
+
+/* contains the title and arrow of the header */
+.question-header {
+    padding: 1.5rem 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+
+
+/* pseudo states of question-header */
+.question-header:hover h2 {
+    color: var(--Soft-red);
+}
+
+.arrow {
+    transform: rotate(180deg);
+}
+
+/* contains answer, which will be hidden and displayed*/
+.question-answer {
+    display: none;
+    padding-bottom: 1.2rem;
+
+}
+
+/* +++++++++++++
+class to be {TOGGLED} by .question-answer*/
+.question-display {
+    display: block;
+
+
+}
+
+/* {end} questions ___________________*/
+
+
+/* 
+________________________
+________________________
+________________________
+{start}  MEDIA QUERYS DESKTOP
+________________________
+________________________
+________________________*/
+
+
+@media screen and (min-width: 800px) {
+
+
+
+
+
+    /* 
+________________________
+________________________
+________________________
+{start}  Global styles adjustments
+________________________
+________________________
+________________________*/
+
+    h1 {
+        font-size: 3rem;
+        color: var(--txt-Very-dark-grayish-blue);
+
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        color: var(--txt-Very-dark-grayish-blue);
+
+        width: 90%;
+
+        font-weight: 400;
+        transition: 0.2s ease;
+    }
+
+
+
+
+    p {
+        font-size: 0.9rem;
+
+
+        color: var(--txt-Dark-grayish-blue);
+    }
+
+    /* {end} Global style adjustments ___________________*/
+
+
+    /*
+=============== 
+
+*****************************
+*****************************
+Custom Classes
+*****************************
+*****************************
+
+===============
+*/
+
+    .card {
+
+        margin: 0rem;
+        margin-top: 0rem;
+
+        max-height: auto;
+        max-width: min(85rem, 100%);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding: 0rem;
+
+
+
+    }
+
+    /* 
+________________________
+________________________
+________________________
+{start}  HERO  
+________________________
+________________________
+________________________*/
+
+    .hero-img {
+        position: relative;
+
+
+        top: 0rem;
+        margin-bottom: 0rem;
+
+        background-image: url("../images/bg-pattern-desktop.svg");
+        height: 100%;
+        width: 100%;
+
+
+        /* Center and scale the image nicely */
+        background-position: right -30% bottom 30%;
+        background-repeat: no-repeat;
+        background-size: 160% 160%;
+
+
+    }
+
+    .vector-hero {
+        filter: drop-shadow(0rem 3rem 0rem hsla(240, 4%, 91%, 0));
+
+
+    }
+
+    .box {
+        margin-top: -9rem;
+        display: block;
+        position: relative;
+        top: 27rem;
+        right: 15%;
+        z-index: 10;
+        max-height: 15rem;
+        max-width: 15rem;
+
+    }
+
+    .vector-hero img {
+
+
+        position: relative;
+
+        object-fit: cover;
+        object-position: right -10% top 50%;
+        height: 30rem;
+        width: 35rem;
+
+
+    }
+
+    /* {end} HERO ___________________*/
+
+    /* 
+________________________
+________________________
+________________________
+{start} QUESTIONS 
+________________________
+________________________
+________________________*/
+
+    .cardcontent {
+
+
+        padding: 6rem;
+        padding-left: 2rem;
+        padding-bottom: 8rem;
+    }
+
+
+    /* {end} QUESTIONS ___________________*/
+
+}
