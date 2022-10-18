@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [14-FAQ-Accordion-Card](https://iguanasplit.github.io/14-FAQ-Accordion-Card/)
 
 ## My process
 
